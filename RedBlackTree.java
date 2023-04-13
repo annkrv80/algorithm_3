@@ -10,8 +10,12 @@ public class RedBlackTree {
         }
 
         for (int i=0; i<array.length; i++){
-            tree.add(array[i]);   
-        }
+            tree.add(array[i]);
+            }
+        System.out.println("\n"+  "RedBlackTree");
+        printNode(tree.root, " ");
+
+       
 }
     private Node root;
 
@@ -122,5 +126,12 @@ public class RedBlackTree {
         return result;
     }
 
+    static void printNode(Node node, String sp) {
+        if (node!= null) {
+          System.out.println(sp + node.value);
+          printNode(node.leftChild, sp + "left ");
+          printNode(node.rightChild, sp + "right ");
+        }
+      }
     
 }
